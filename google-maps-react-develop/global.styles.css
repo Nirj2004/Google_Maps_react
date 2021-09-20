@@ -1,0 +1,11 @@
+@import url("../node/modules/hightlight.js/styles.github.css");
+
+
+#readme {
+    padding: 10px;
+
+
+    img {
+        width: 100%;
+    }
+}
