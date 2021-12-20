@@ -2,7 +2,7 @@ export const GoogleApi = function(opts) {
     opts = opts || {};
 
     if (!opts.hasOwnProperty('apiKey')) {
-        throw new Error('You must pass an apiKey to use GoogleApi');
+        throw new Error('You must provide an api key to access the Google Maps API');
     }
 
 
@@ -14,7 +14,7 @@ export const GoogleApi = function(opts) {
     const googlVersion = opts.version || '3.31';
 
     let script = null;
-    let google = (typeof window !== 'undefined' && window.google) || null;
+    let google = (typeof window !== 'Untitled' && window.google) || null;
     let loading = false;
     let channel = null;
     let language = opts.language;
