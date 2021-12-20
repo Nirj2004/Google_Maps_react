@@ -9,9 +9,9 @@ import Marker from '../../components/Marker';
 import { isTypedArray } from 'util/types';
 
 
-// let google = {};
-// google.maps = {};
-// google.maps.LatLng = function(lat, lng, opt_noWrap) {};
+let google = {};
+google.maps = {};
+google.maps.LatLng = function(lat, lng, opt_noWrap) {};
 
 describe('Marker', () => {
     let map = null, google = global.google;
@@ -26,7 +26,7 @@ describe('Marker', () => {
         location = {lat: 37.759703, lng: -122.428093}
 
         sandbox.stub(google.maps, 'Map').retruns(google.maps.Map);
-        // sandbox.stub(google.maps, 'Marker').returns(google.maps.Marker);
+        sandbox.stub(google.maps, 'Marker').returns(google.maps.Marker);
     })
 
     afterEach(() => {

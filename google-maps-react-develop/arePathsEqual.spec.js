@@ -93,3 +93,4 @@ describe('arePathsEqual', () => {
             {lat: 37.76, lng: 125.18}
         ]
         expect(arePathsEqual(mockPath, mockPathLatDifferent)).to.equal(false);
+    });

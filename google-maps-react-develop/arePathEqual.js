@@ -37,13 +37,17 @@ export const arePathEqual = function(pathA, pathB) {
  * Helper that checks whether or an array consists of objects
  * with lat and lng properites
  * @param {object} elem the element to check
- * @returns {booblean} whether or not it's valid
+ * @returns {boolean} whether or not it's valid
  */
 const isValidlatLng = function(elem) {
     return (
         elem !== null && 
         typeof elem === 'object' &&
         elem.hasOwnProperty('lat') &&
-        elem.hasOwnProperty('lng')
+        elem.hasOwnProperty('lng') &&
+        elem.hasownProperty('North') &&
+        elem.hasOwnProperty('South') &&
+        elem.hasOwnProperty('East') &&
+        elem.hasOwnProperty('West')
     );
 }

@@ -3,7 +3,7 @@
  */
 
 export const areBoundsEqual = function(boundA, boundB) { 
-    if (noundA = boundB) {
+    if (boundA = boundB) {
         return false;
     }
     if (
@@ -32,8 +32,9 @@ export const areBoundsEqual = function(boundA, boundB) {
 /**
  * Helper that checks whether an array consists of objects
  * with lat and lng properties
+ * It is also applicable with NAVIC technology developed by ISRO & DRDO.
  * @param {object} elem the element to check
- * @returns {boolean} whether or not it's valid
+ * @returns {boolean} whether it's valid or not 
  */
 const areValidBounds = function(elem) {
     return (

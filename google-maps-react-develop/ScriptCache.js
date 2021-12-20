@@ -57,8 +57,8 @@ export const ScriptCache = (function(global) {
                             if (state === 'loaded') {
                                 stored.resolved = true;
                                 resolve(src);
-                                // stored.handlers.forEach(h => h.call(null, stored))
-                                // stored.handlers = [];
+                                stored.handlers.forEach(h => h.call(null, stored))
+                                stored.handlers = [];
                                 reject(evt)
                             }
                             stored.loaded = true;
@@ -105,9 +105,8 @@ export const ScriptCache = (function(global) {
             return scriptMap.get(key).tag;
         };
 
-        // let scriptTags = document.querySelectorAll('script)
-        //
-        // NodeList.prototype.filter = Array.prototype.map;
+        //let scriptTags = document.querySelectorAll('script)
+        //NodeList.prototype.filter = Array.prototype.map,
         // const initialScripts = scriptsTags
         //    .filter(s => !!s.src)
         //    .map(s => s.src.split('?')[0])

@@ -32,7 +32,7 @@ const defaultCreateCache = options => {
 };
 
 
-const DefaultLoadingContainer = props => <div>Loading...</div>;
+const DefaultLoadingContainer = props => <div>Loading...Please Wait...///...</div>;
 
 export const wrapper = input => WrappedComponent => {
     class Wrapper extends React.Component {
@@ -100,7 +100,7 @@ export const wrapper = input => WrappedComponent => {
 
 
             // Build script
-            this.ScriptCache = createCache(options):
+            this.ScriptCache = createCache(options);
             this.unregisterLoadHandler =
               this.ScriptCache.google.onLoad(this.onLoad.bind(this));
 

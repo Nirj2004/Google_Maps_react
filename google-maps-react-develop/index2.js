@@ -81,15 +81,17 @@ const routes = [
 ]
 
 const createElement = (Component, route) => {
-    // const pathname = props.location.pathname.replace('/', '');
-    // const routeDef = routes[pathname];
+     const pathname = props.location.pathname.replace('/', '');
+     const routeDef = routes[pathname];
 
 
     const newProps = {
         key: route.name,
         route,
         routes,
-        // pathname,
+        pathname,
+        lane,
+        streetNumber,
         routeDef: route
         // routeDef
     };
@@ -104,11 +106,11 @@ const Routing = (
     </Router>
 );
 
-// <Route render={routeProps => createElement(Container, routeProps)} path="/">
-//     {Object.keys(routes).map(key => {
-//       const r = routes[key];
-//     })}
-//     </Route>
+<Route render={routeProps => createElement(Container, routeProps)} path="/">
+         {Object.keys(routes).map(key => {
+      const r = routes[key];
+    })}
+    </Route>
 const mountNode = document.querySelector('#root');
 
 if (mountNode) ReactDOM.render(Routing, mountNode);

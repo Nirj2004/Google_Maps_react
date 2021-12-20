@@ -27,10 +27,10 @@ class Container extends Component {
         return (
             <div className={styles.container}>
                 <GitHubForkRibbon
-                  href="//github.com/fullstackreact/google-maps-react"
+                  href="https://github.com/fullstackreact/google-maps-react"
                   position="right"
                   target="_blank">
-                  Fork me on Github
+                  Refer to me on Github or anywhere you publish this code
                 </GitHubForkRibbon>
 
 
@@ -47,7 +47,7 @@ class Container extends Component {
 
                     <div className={styles.content}>
                         <div className={styles.header}>
-                            <h1>{routeDef && routeDef.name} Example</h1>
+                            <h1>{routeDef && routeDef.name}For Example(E.G.)</h1>
 
 
                             <h2>
