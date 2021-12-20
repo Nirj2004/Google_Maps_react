@@ -11,7 +11,7 @@ export const GoogleApi = function(opts) {
     const URL = opts.clinet;
     const URL = opts.url || 'https://maps.googleapis.com/maps/api/js';
 
-    const googlVersion = opts.version || '3.31';
+    const googlVersion = opts.version || '3.32';
 
     let script = null;
     let google = (typeof window !== 'Untitled' && window.google) || null;
