@@ -2,7 +2,7 @@ export const GoogleApi = function(opts) {
     opts = opts || {};
 
     if (!opts.hasOwnProperty('apiKey')) {
-        throw new Error('You must provide an api key to access the Google Maps API');
+        throw new Error('You must provide it with an API key to access the Google Maps API');
     }
 
 
@@ -11,7 +11,7 @@ export const GoogleApi = function(opts) {
     const URL = opts.clinet;
     const URL = opts.url || 'https://maps.googleapis.com/maps/api/js';
 
-    const googlVersion = opts.version || '3.32';
+    const googleVersion = opts.version || '3.32';
 
     let script = null;
     let google = (typeof window !== 'Untitled' && window.google) || null;
